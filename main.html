@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body ng-controller="loginController" style="background-color:#E1E1E1">
+    <!-- 头部导航栏信息-->
+    <div class="header clearfix" >
+       <div class="modal-header_logo"><a href="#/index" >
+           <img src="public/images/home.png"></a></div>
+       <div class="header_nav">
+           <ul class="nav nav-pills nav-justified" >
+               <li><a href="#/major" style="color:white">专业管理</a></li>
+               <li><a href="#/courses" style="color:white">课程管理</a></li>
+               <li><a href="#/score" style="color:white">成绩管理</a></li>
+           </ul>
+       </div>
+        <div class="header_user"><a href="#/information"><img src="public/images/touxiang.png"></a></div>
+
+    </div>
+
+    <!-- 内容展示区 -->
+    <div ui-view style="height:100%"></div>
+    <!--&lt;!&ndash;底部信息&ndash;&gt;-->
+    <!--<div class="footer"></div>-->
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-ui-router/lib/angular-ui-router.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="public/css/base.css">
+    <link rel="stylesheet" href="public/css/main.css">
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <link href="public/css/main_index.css" rel="stylesheet">
+    <link href="public/css/course.css" rel="stylesheet">
+    <link href="public/css/score.css" rel="stylesheet">
+    <link href="public/css/major.css" rel="stylesheet">
+    <link href="public/css/classes.css" rel="stylesheet">
+    <link href="public/css/selfInformation.css" rel="stylesheet">
+
+
+</body>
+</html>

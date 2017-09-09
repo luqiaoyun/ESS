@@ -1,0 +1,39 @@
+
+
+<!--首页面的信息-->
+    <!--标题-->
+<div class="index_container" ng-controller="IndexController" ui-view style="background-color:white;width:80%;height:1000%;margin-top:15px;">
+    <h1>最新消息</h1>
+    <hr/>
+        <div class="index_show" >
+            <a class="news clearfix" ng-click="show(notice.title,notice.content,notice.author,notice.date)" ng-repeat="notice in notices" href="">
+                <!--左边的logo-->
+                <div class="news_logo"><img src="public/images/news4.png"></div>
+                <!--中间的新闻消息-->
+                <div class="news_info">
+                    <p class="title"><img src="public/images/star-full.png"><span class="h3 text-primary">{{notice.title}}</span></p>
+                    <p>{{notice.author}}</p>
+                    <p>{{notice.date}}</p>
+
+                </div>
+               
+                
+            </a>
+        <div>
+  
+
+
+
+
+</div>
+
+
+
+
+
+ 
+
+
+
+
+

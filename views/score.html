@@ -1,0 +1,58 @@
+
+    <div class="score_container" ng-controller="scoreController">
+        <div class="score_list">
+            <!--教师登录时显示-->
+            <div ng-if="type=='1'">
+                <button><a href="#/score/input">成绩录入</a></button>
+                <button><a href="#/score/search">成绩查询</a></button>
+            </div>
+            <!--学生登录时显示-->
+            <div ng-if="type=='0'">
+                <button><a href="#/score/current">本学期成绩</a></button>
+                <button> <a href="#/score/bad">不及格成绩</a></button>
+                <button><a href="#/score/all">全部成绩</a></button>
+            </div>
+        </div>
+        <div class="score_show">
+            <div ui-view>
+                <!--老师登录的时候就默认显示全部所教的课程-->
+                <div ng-controller="score_inputController" ng-controller="score_updateController" ng-if="type==1" style="width:70% ;margin:50px auto">
+                    <table class="table table-hover" style="background-color: white">
+                        <tr>
+                            <td>课序号</td>
+                            <td>课程名</td>
+                            <td>学分</td>
+                            <td>录入成绩</td>
+                            <td>修改成绩</td>
+                        </tr>
+                        <tr ng-repeat="course in courses">
+                            <td>{{course.code}}</td>
+                            <td>{{course.name}}</td>
+                            <td>{{course.units}}</td>
+                            <td><a class="btn btn-primary btn-sm" ng-click="input(course.code,course.name)">录入成绩</a></td>
+                            <td><a class="btn btn-danger btn-sm" ng-click="update(course.code,course.name)">修改成绩</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <!--如果登录的是学生就默认显示本学期成绩-->
+                <div ng-if="type==0" style="width:70% ;margin:50px auto"">
+                    <table class="table table-striped">
+                        <caption class="text-center h2 text-primary">本学期成绩</caption>
+                        <tr>
+                            <td>课程名</td>
+                            <td>课程学分</td>
+                            <td>日期</td>
+                            <td>成绩</td>
+                        </tr>
+                        <tr ng-repeat="item in data" >
+                            <td ng-if="(item.date).substr(0,4)==Year && (item.date).substr(5,2)<=7">{{item.name}}</td>
+                            <td ng-if="(item.date).substr(0,4)==Year && (item.date).substr(5,2)<=7">{{item.units}}</td>
+                            <td ng-if="(item.date).substr(0,4)==Year && (item.date).substr(5,2)<=7">{{item.date}}</td>
+                            <td ng-if="(item.date).substr(0,4)==Year && (item.date).substr(5,2)<=7">{{item.grade}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>       
+        </div>        
+    </div>
+

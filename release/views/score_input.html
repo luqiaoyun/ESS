@@ -1,0 +1,20 @@
+<div ui-view ng-controller="score_inputController" ng-controller="score_updateController" style="width:70% ;margin:50px auto">
+	<table class="table table-hover" style="background-color: white">
+		<tr>
+			<td>课序号</td>
+			<td>课程名</td>
+			<td>学分</td>
+			<td>录入成绩</td>
+			<td>修改成绩</td>
+		</tr>
+		<tr ng-repeat="course in courses">
+			<td>{{course.code}}</td>
+			<td>{{course.name}}</td>
+			<td>{{course.units}}</td>
+			<td><a class="btn btn-primary btn-sm" ng-click="input(course.code,course.name)">录入成绩</a></td>
+			<td><a class="btn btn-danger btn-sma" ng-click="update(course.code,course.name)">修改成绩</a></td>
+		</tr>
+	</table>
+
+	
+</div>

@@ -1,0 +1,16 @@
+
+<div ng-controller="coursesController">
+	<table class="table table-striped" style="background-color: white">
+		<caption class="text-center h2 text-primary" style="font-family: 楷体">本学期课程</caption>
+		<tr>
+			<td>课程名</td>
+			<td>课程学分</td>
+			<td>日期</td>
+		</tr>
+		<tr ng-repeat="item in data" >
+			<td ng-if="(item.date).substr(0,4)==Year && (item.date).substr(5,2)<=7">{{item.name}}</td>
+			<td ng-if="(item.date).substr(0,4)==Year && (item.date).substr(5,2)<=7">{{item.units}}</td>
+			<td ng-if="(item.date).substr(0,4)==Year && (item.date).substr(5,2)<=7">{{item.date}}</td>	
+		</tr>
+	</table>
+</div>

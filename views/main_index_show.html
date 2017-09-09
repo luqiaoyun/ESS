@@ -1,0 +1,13 @@
+<div ng-controller="IndexController" ui-view>
+	<p class="h2 text-center text-primary">{{title}}<p>
+	<p class="text-center text-danger">{{author}}</p>
+	<p class="text-center text-danger">{{date}}</p>
+	<div style="width:65%;height:350px;margin:4px auto; border:1px solid blue;font-size: 20px;padding:10px 10px;border-radius:30px;">
+		{{content}}
+		
+	</div>
+	<div style="margin:0 auto; width:65%;">
+	<a class="btn btn-primary" href="#index/show/update" ">修改公告</a>
+	<a class="btn btn-primary" ng-click="deleteN(title)">删除公告</a>
+	</div>	
+</div>

@@ -1,0 +1,16 @@
+
+<div ng-controller="courses_search_showController">
+	<div style="width:30%;">
+		<form>
+		<label>课序号：</label>
+		<input type=text ng-model="code" class="form-control">
+		<label>课程名：</label>
+		<input type=text ng-model="name" class="form-control"> 
+		<a href="#/courses/search/show" class="btn btn-primary">确定</a>
+		<button type="reset" class="btn btn-danger">重置</button>
+		</form>
+	</div>
+	<hr style="border:1px solid blue ;">
+	
+	<div ui-view></div>
+</div>

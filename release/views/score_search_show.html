@@ -1,0 +1,17 @@
+<div ng-controller="score_search_showController" style="width:70% ;margin:50px auto">
+	<table class="table table-hover" style="background-color: white">
+		<tr style="background-color:gray">
+			<td>课序号</td>
+			<td>课程名</td>
+			<td>学分</td>
+			<td>成绩</td>
+		</tr>
+		<tr ng-repeat="item in data">
+			<td>{{item.code}}</td>
+			<td>{{item.name}}</td>
+			<td>{{item.units}}</td>
+			<td>{{item.grade}}</td>
+		</tr>
+	</table>
+	
+</div>

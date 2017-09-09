@@ -1,0 +1,18 @@
+<div ng-controller="score_inputController">
+	<table class="table table-hover" style="background-color: white">
+		<caption class="text-center h3">{{courseName}}</caption>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>成绩</td>
+		</tr>
+		<tr ng-repeat="student in students">
+			<td>{{student.suid}}</td>
+			<td>{{student.name}}</td>
+			<td><input type="text" name="" style="border:1px solid black" ng-model="$parent.scores[$index]"></td>
+		</tr>
+	</table>
+	<button class="btn btn-primary" ng-click="submit()">提交</button>
+	<button type="reset" class="btn btn-danger">重置</button>
+	<span ng-model="msg">{{msg}}</span>
+</div>

@@ -1,0 +1,27 @@
+
+    <div class="course_container clearfix" ng-controller="coursesController">
+        <div class="course_list">
+            <a href="#/courses/current" >本学期课程安排</a>
+            <a href="#/courses/search">课程信息查询</a>
+            <a href="#/courses/select" ng-if="type==0">学生选课</a>
+        </div>
+        <div class="course_show" >
+        	<div ui-view style="width:70%;margin:30px auto;">
+                <table class="table table-striped" style="background-color: white">
+                    <caption class="text-center text-primary h2" style="font-family: 楷体">所有课程</caption>
+                    <tr>
+                        <td>课程名</td>
+                        <td>学分</td>
+                        <td>时间</td>
+                    </tr>
+                    <tr ng-repeat="item in data">
+                        <td>{{item.name}}</td>
+                        <td>{{item.units}}</td>
+                        <td>{{item.date}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        	
+    </div>
+    

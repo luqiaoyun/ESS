@@ -1,0 +1,18 @@
+<div ng-controller="score_inputController">
+	<table class="table  table-hover" style="background-color: white">
+		<caption class="text-center h3">{{courseName}}</caption>
+		<tr>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>成绩</td>
+			<td>操作</td>
+		</tr>
+		<tr ng-repeat="student in students_update">
+			<td>{{student.suid}}</td>
+			<td>{{student.name}}</td>
+			<td><input type="text" name="" style="border:1px solid black" ng-model="$parent.scores[$index]" placeholder="{{student.grade}}"></td>
+			<td><button class="btn btn-primary" ng-click="submit_update(student.suid,student.grade)">提交</button></td>
+		</tr>
+	</table>
+	<span ng-model="msg">{{msg}}</span>
+</div>

@@ -1,0 +1,11 @@
+ <div class="login_container" ui-view>
+            <form  role="form" action="">
+                <h2 class="text-center text-primary">找回密码</h2>
+                <div class="username"><input type="text" placeholder="用户名" class="form-control" ng-model="suid"> </div>
+                <div class="pwd"> <input type="text" placeholder="邮箱" class="form-control" ng-model="password"></div>
+                <span ng-model="msg">{{msg}}</span>
+                <div class="login"><input type="submit" value="确定" ng-click="login()" ></div>
+            </form>
+
+
+        </div>

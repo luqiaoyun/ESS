@@ -1,0 +1,18 @@
+<div style="width:70% ;margin:50px auto">
+	<table class="table table-hover" style="background-color: white">
+		<caption class="text-center h2 text-primary">全部成绩</caption>
+		<tr>
+			<td>课程名</td>
+			<td>课程学分</td>
+			<td>日期</td>
+			<td>成绩</td>
+		</tr>
+		<tr ng-repeat="item in data">
+			<td>{{item.name}}</td>
+			<td>{{item.units}}</td>
+			<td>{{item.date}}</td>
+			<td>{{item.grade}}</td>
+		</tr>
+	</table>
+	
+</div>

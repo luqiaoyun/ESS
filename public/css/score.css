@@ -1,0 +1,38 @@
+.score_container {
+  width: 100%;
+  height: 546px;
+  color: red;
+}
+.score_container .score_list {
+  float: left;
+  width: 20%;
+  height: 546px;
+  border: 1px solid #C0C2CC;
+  background-color: #F7F7F7;
+  text-align: center;
+  padding-top: 150px;
+}
+.score_container .score_list button {
+  width: 80%;
+  display: block;
+  margin: 20px auto;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid #E4BEB3;
+  border-radius: 30px;
+  background-color: #E4BEB3 ;
+}
+.score_container .score_show {
+  float: right;
+  width: 80%;
+  height: 546px;
+  border: 1px solid #C0C2CC;
+  border-left: 6px solid #C0C2CC;
+}
+.score_container .score_show .type-in {
+  width: 20%;
+  margin: 80px auto;
+}
+.score_container .score_show .type-in form input {
+  padding-top: 20px;
+}
